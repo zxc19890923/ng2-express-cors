@@ -1,0 +1,14 @@
+1、 angular2 不需要配置，按照常规办法发送请求就可以了
+
+2、express端配置
+
+1. 安装cors
+npm install cors
+
+2. 配置app.js文件
+var cors = require("cors");
+...
+app.use(cors());
+
+3. 在路由中获取数据，然后发送数据 res.json(data);
+这样就实现了跨域
